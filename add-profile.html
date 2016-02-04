@@ -1,0 +1,913 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Add Profile | Lucas Legal</title>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+ <script src="./js/global.js"></script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="css/custom-style.css">
+<link rel="stylesheet" href="css/themify-icons.css">
+<link rel="stylesheet" href="css/jQueryTab.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="css/animation.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/datepicker.css">
+<link rel="stylesheet" href="css/responsive.css" type="text/css">
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 8]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<!-- Font CSS -->
+<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+<div class="container-fluid">
+<div class="HeaderWrap">
+	    	<div class="LogoCon">
+   	    	<a href="index.html"><img src="././images/logo-img.png" alt="" /></a>
+        </div>
+        <nav class="menu">
+        <div id="cssmenu">
+      <div id="head-mobile">
+        <ul>
+        
+            	<li><a href="#"><span class="ti-search"></span></a></li>
+                <li><a data-toggle="modal" data-target="#Modal-login" href="#"><span class="ti-user"></span></a></li>
+                <li><a href="#"><span class="ti-comments"></span></a></li>
+        </ul>
+      </div>
+      <div class="button"></div>
+      <ul>
+            <li><a href="#">Library & Store</a></li>
+                <li><a href="#">Archive</a></li>
+            	<li class="hidden-xs"><a href="#"><span class="ti-search"></span></a></li>
+                <li class="hidden-xs"><a data-toggle="modal" data-target="#Modal-login" href="#"><span class="ti-user"></span></a></li>
+                <li class="hidden-xs"><a href="#"><span class="ti-comments"></span></a></li>
+            </ul>
+    </div>
+        	
+        </nav>
+</div></div>
+<div class="container-fluid SubPageWrap">
+  <div class="container">
+    <div class="row SubPageInn">
+      <div class="col-lg-9">
+        <div class="col-lg-4 ProfImg"> <img src="images/profile.png" /> </div>
+        <div class="col-lg-8 ProfImg">
+          <label class="control-label">Select File</label>
+          <input id="input-1" type="file" class="file">
+        </div>
+        <div class="col-lg-12 ProfDetails AddProf">
+          <div class="row">
+            <form role="form">
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <label for="APName">First Name</label>
+                  <input type="text" class="form-control" id="APName" placeholder="First name">
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <label for="APLastN">Last name</label>
+                  <input type="text" class="form-control" id="APLastN" placeholder="Last name">
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <label for="APContactNo">Contact No</label>
+                  <input type="text" class="form-control" id="APContactNo" placeholder="Contact No">
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <label for="APMaritalSta">Marital Status</label>
+                  <select class="form-control" id="APMaritalSta">
+                    <option value="0">Select</option>
+                  
+                  </select>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <label for="APMdate">Date of Marriage Anniversary</label>
+                  <input  type="text" placeholder="Date of Marriage Anniversary" class="form-control"  id="APMdate">
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <label for="APNation">Nationality</label>
+                  <input type="text" class="form-control" id="APNation" placeholder="Nationality">
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <label for="APIncomePan">Income Tax PAN</label>
+                  <input type="text" class="form-control" id="APIncomePan" placeholder="Income Tax PAN">
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div class="FormTitle">Residential Address</div>
+                <div class="row">
+                  <div class="form-group col-lg-6">
+                    <label for="APresiAddress1">Address Line 1</label>
+                    <input type="text" id="APresiAddress1" cols="" class="form-control" rows="">
+                    </textarea>
+                  </div>
+                  <div class="form-group col-lg-6">
+                    <label for="APresiAddress2">Address Line 2</label>
+                    <input type="text" id="APresiAddress2" cols="" class="form-control" rows="">
+                    </textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <label for="APState">State</label>
+                  <select class="form-control" id="APState">
+                    <option value="0">Select</option>
+                   
+                  </select>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <label for="APDistrict">District</label>
+                  <select class="form-control" id="APDistrict">
+                    <option value="0">Select</option>
+                   
+                  </select>
+                </div>
+              </div>
+              
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <label for="APtw">Town / Village</label>
+                  <select class="form-control" id="APtw">
+                    <option value="0">Option</option>
+                    
+                  </select>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <label for="APPincode">Pin Code</label>
+                  <input type="text" class="form-control" id="APPincode" placeholder="">
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div class="FormTitle">Specializations</div>
+                <div class="table-responsive">
+                  <table border="0" cellpadding="0" cellspacing="0" class="table table-bordered">
+                    <thead>
+                     <th>Name</th>
+                      <th>Description</th>
+                   
+                        </thead>
+                    <tbody>
+                      <tr>
+                        <td><input type="text" class="form-control" id="" placeholder="Name"></td>
+                        <td><textarea class="form-control" placeholder="Description"></textarea></td>
+                        </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              
+              <div class="col-lg-12">
+                <div class="FormTitle">Categories</div>
+             
+                <div class="col-lg-6">
+                <div class="form-group">
+                  <label for="APCat">Category</label>
+                  <select class="form-control" id="APCat">
+                    <option value="0">Select</option>
+                   
+                  </select>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <label for="APSubCat" >Sub Category</label>
+                  <select class="form-control" id="APSubCat" multiple>
+                    <option value="0">Select</option>
+                   
+                  </select>
+                </div>
+              </div>
+                
+              </div>
+              
+              <div class="col-lg-12">
+                <div class="FormTitle">Achievements</div>
+                <div class="table-responsive">
+                  <table border="0" cellpadding="0" cellspacing="0" class="table table-bordered">
+                    <thead>
+                     <th>Name</th>                    
+                      <th>Description</th>
+                      <th>Year</th>
+                        </thead>
+                    <tbody>
+                      <tr>
+                        <td><input type="text" class="form-control" id="" placeholder="Name"></td>                       
+                        <td><textarea class="form-control" placeholder="Description"></textarea></td>
+                         <td><select class="form-control">
+                        <option>Select Year</option>
+                        <option>2016</option>
+                        </select></td>
+                      </tr>
+                      
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div class="FormTitle">Experience</div>
+                <div class="table-responsive">
+                  <table border="0" cellpadding="0" cellspacing="0" class="table table-bordered">
+                    <thead>
+                    <th>From</th>
+                      <th>To</th>
+                      <th>Description</th>
+                        </thead>
+                    <tbody>
+                      <tr>
+                        <td><input type="text" class="form-control" id="" placeholder="From"></td>
+                        <td><input type="text" class="form-control" id="" placeholder="To"></td>
+                        <td><textarea class="form-control" placeholder="Description"></textarea></td>
+                      </tr>
+                      
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div class="FormTitle">Qualification / Academics / Education</div>
+                <div class="table-responsive">
+                  <table border="0" cellpadding="0" cellspacing="0" class="table table-bordered">
+                    <thead>
+                    <th>Description</th>
+                      <th>Institute / University</th>
+                      <th>Year</th>
+                        </thead>
+                    <tbody>
+                      <tr>
+                        <td><textarea class="form-control" placeholder="Description"></textarea></td>
+                        <td><input type="text" class="form-control" id="" placeholder="Institute / University"></td>
+                        <td><select class="form-control">
+                        <option>Select Year</option>
+                        <option>2016</option>
+                        </select></td>                        
+                      </tr>
+                      
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div class="FormTitle">Registration / Membership</div>
+                <div class="table-responsive">
+                  <table border="0" cellpadding="0" cellspacing="0" class="table table-bordered">
+                    <thead>
+                        <th>Registration / Membership No</th>
+                        <th>Registration / Membership Type</th>
+                        <th>Registering Council / Association / Authority</th>
+                        <th width="70">Year</th>
+                        </thead>
+                    <tbody>
+                      <tr>
+                        <td><input type="text" class="form-control" id="" placeholder="Registration / Membership No"></td>
+                        <td><input type="text" class="form-control" id="" placeholder="Registration / Membership Type"></td>
+                        <td><input type="text" class="form-control" id="" placeholder="Registering Council / Association / Authority"></td>  
+                        <td><input type="text" class="form-control" id="" placeholder="Year"></td>  
+                      </tr>
+                      
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              
+              
+              
+              <div class="col-lg-12">
+                <button type="submit" class="btn btn-default SubmitProfInfo">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+<div class="container-fluid FooterWrap">
+ 
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <h1>About</h1>
+          <ul class="col-lg-6">
+            <li><a href="#"><i class="fa fa-caret-right"></i> About us</a></li>
+            <li><a href="#"><i class="fa fa-caret-right"></i> Press & Media</a></li>
+            <li><a href="#"><i class="fa fa-caret-right"></i> Careers</a></li>
+            <li><a href="#"><i class="fa fa-caret-right"></i> Testimonials</a></li>
+            <li><a href="#"><i class="fa fa-caret-right"></i> Blog</a></li>
+          </ul>
+          <ul class="col-lg-6">
+            <li><a href="#"><i class="fa fa-caret-right"></i> Privacy Policy</a></li>
+            <li><a href="#"><i class="fa fa-caret-right"></i> Terms & Conditions</a></li>
+            <li><a href="#"><i class="fa fa-caret-right"></i> FAQ</a></li>
+            <li><a href="#"><i class="fa fa-caret-right"></i> Associate with us</a></li>
+            <li><a href="#"><i class="fa fa-caret-right"></i> Contact us</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3">
+          <h1>Services</h1>
+          <ul>
+            <li><a href="#"><i class="fa fa-caret-right"></i> Chat with a Professional</a></li>
+            <li><a href="#"><i class="fa fa-caret-right"></i> Call a Professional</a></li>
+            <li><a href="#"><i class="fa fa-caret-right"></i> Book an appointment</a></li>
+            <li><a href="#"><i class="fa fa-caret-right"></i> Library & Store</a></li>
+            <li><a href="#"><i class="fa fa-caret-right"></i> Archive</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3">
+          <h1>Follows us on</h1>
+          <ul class="SocialFootMenu">
+            <li class="FbIcon"><a href="#"><i class="fa fa-facebook"></i> Facebook</a></li>
+            <li class="TIcon"><a href="#"><i class="fa fa-twitter"></i> Twitter</a></li>
+            <li class="GpIcon"><a href="#"><i class="fa fa-google-plus"></i> Google Plus</a></li>
+            <li class="YtIcon"><a href="#"><i class="fa fa-youtube"></i> You Tube</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="CopyTxt"> Copyright &copy; 2016 Company Name Private Limited. All rights reserved. </div>
+
+
+<!-- Modal Start-->
+<div class="modal fade" id="Modal-login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="text-center">Login</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-close"></i></button>
+      </div>
+      <div class="modal-body">
+        <form name="form1" method="post" action="" >
+          <div class="form-group">
+            <div class="input-group"> <span class="input-group-addon" id="basic-addon1"><i class="fa fa-send-o"></i></span>
+              <select class="form-control" id="user_select">
+                <option value="T">Admin</option>
+                <option value="C">Client</option>
+                <option value="A">Professional</option>
+                <option value="b">Farmer</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="input-group"> <span class="input-group-addon" id="basic-addon1"><i class="fa fa-user"></i></span>
+              <input type="text" class="form-control" placeholder="User Name" name="user_email" id="user_email" aria-describedby="basic-addon1" required >
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="input-group"> <span class="input-group-addon" id="basic-addon1"><i class="fa fa-lock"></i></span>
+              <input type="password" class="form-control" placeholder="Password" name="password" id="password" aria-describedby="basic-addon1" required >
+            </div>
+            <div id="login_response" style="color:red;"></div>
+          </div>
+          <div class="form-group">
+            <label>
+              <input type="checkbox">
+              Remember Me</label>
+            <a href="#Modal-forgotpassword" data-toggle="modal" data-dismiss="modal" class="pull-right">Forgot password?</a> </div>
+          <div class="form-group text-center">
+            <button class="btn_submit btn btn-default FullWidth OrgBtn" id="login_btn">Submit</button>
+          </div>
+          <div class="text-center">Don’t have an account? <a  href="#Modal-register" data-toggle="modal" data-dismiss="modal">Sign Up</a></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal End--> 
+<!-- Model forgot-password start -->
+<div class="modal fade" id="Modal-forgotpassword" tabindex="-1" role="dialog" aria-labelledby="Modal-forgotpassword" aria-hidden="true">
+  <div class="modal-dialog">
+    <form name="form2" method="post" action="">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="text-center ">Forgot Password</h2>
+          <p class="text-center">Don't worry, it happens to the best of us.</p>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-close"></i></button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <div class="input-group" id="email_div"> <span class="input-group-addon" id="basic-addon1"><i class="fa fa-user"></i></span>
+              <input type="text" class="form-control" placeholder="User Name" name="email_forgot" id="email_forgot" onclick="hide_mobile()" aria-describedby="basic-addon1" required >
+            </div>
+            <div class="input-group" id="otp_div"> <span class="input-group-addon" id="basic-addon1"><i class="fa fa-envelope-o"></i></span>
+              <input type="password" class="form-control" placeholder="Verification Code" name="verification_code" id="verification_code"  aria-describedby="basic-addon1" required >
+            </div>
+            <div class="input-group" id="newpass_div"> <span class="input-group-addon" id="basic-addon1"><i class="fa fa-envelope-o"></i></span>
+              <input type="password" class="form-control" placeholder="Set Password" name="new_password" id="new_password" aria-describedby="basic-addon1" required >
+            </div>
+            <div class="col-md-6 col-sm-6">
+              <div class="form-group">
+                <div id="forgot_response"></div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group text-center" id="change_button">
+            <button class="btn_submit btn btn-default FullWidth OrgBtn" id="opt_send">Submit</button>
+            <button class="btn_submit" id="opt_veriy">Submit</button>
+          </div>
+          <div class="text-center"> Don't have an account? <a data-dismiss="modal" data-toggle="modal" href="#Modal-login" >Login</a> </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<!-- Modal forgot-password end --> 
+
+<!-- Modal- register start -->
+<div class="modal fade" id="Modal-register" tabindex="-2" role="dialog" aria-labelledby="Modal-register" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="text-center">Registration</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-close"></i></button>
+      </div>
+      <div class="modal-body">
+        <form name="form3" method="post" action="" id="signupForm">
+          <div class="row">
+            <div class="col-md-6 col-sm-6">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="First Name" name="first_name" id="first_name" required >
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-6">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Last Name" name="last_name" id="last_name" required >
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-6">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="User Name" name="user_email" id="user_email" aria-describedby="basic-addon1" required >
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-6">
+              <div class="form-group">
+                <select class="form-control" name="user_type_sign" id="user_type_sign" required >
+                  <option>Select User Type</option>
+                  <option value="T">Admin</option>
+                  <option value="C">Client</option>
+                  <option value="A">Professional</option>
+                  <option value="b">Farmer</option>
+                  <!--<option value="T">Technician</option>
+<option value="C">User</option>-->
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-6">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Email" name="user_email_sign" id="user_email_sign" required >
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-6">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Phone No" name="phone_no" id="phone_no" required >
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-6">
+              <div class="form-group">
+                <input type="password" class="form-control" placeholder="Password" name="password_sign" id="password_sign" required >
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-6">
+              <div class="form-group">
+                <input type="password" class="form-control" placeholder="Confirm Password" name="confirm_password" id="confirm_password" required >
+              </div>
+            </div>
+          
+            
+            <div class="col-md-6 col-sm-6">
+              <div class="form-group">
+                <div id="regis_response"></div>
+              </div>
+            </div>
+            <div class="col-md-12 col-sm-12">
+              <div class="form-group">
+                <input type="checkbox">
+                <label>I Agree to our <a href="#">Terms and Conditions</a> and our <a href="#">Privacy Policy</a>.</label>
+              </div>
+            </div>
+            <div class="col-md-12 col-sm-12">
+              <div class="form-group text-center">
+                <button class="btn_submit btn btn-default FullWidth OrgBtn" id="signup_btn">Submit</button>
+              </div>
+            </div>
+            
+            <!--<div class="text-center">
+ Don't have an account? <a data-dismiss="modal" data-toggle="modal" href="#Modal-login" >Login</a>
+  </div>--> 
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal- register start --> 
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="./js/bootstrap.min.js"></script>
+<script src="./js/script.js"></script>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
+<script src="js/jquery.cookie.js" type="text/javascript"></script> --> 
+<strong><script src="js/jQueryTab.js"></script></strong> 
+<script src="js/bootstrap-datepicker.js"></script> 
+
+<!-- jQuery multiselect --> 
+<script>
+var jsonList;
+
+    $(document).ready(function(){
+	 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) { 
+	 $("#div_phone").html('<a href="tel:+1800 12 34 56 78"><i class="fa fa-phone"></i></a>');}
+	$('#otp_div').hide();
+	$('#newpass_div').hide();
+	$('#opt_veriy').hide();
+	//alert( $.cookie("user_type") );
+      $("#login_btn").click(function(e){
+		  
+		  var user_email = $("#user_email").val();
+		  var password = $("#password").val();
+		  var user_type = $("#user_select option:selected").val();
+		  	  
+          e.preventDefault();
+			$.ajax({type: "POST",
+                url: "../bizlogic/login_user.php",
+                data: { user_email: user_email, password: password, user_type: user_type },
+				dataType: "JSON",
+                success:function(result){
+				
+				var status =  result.status;
+					if(status ==0)
+					{
+						$("#login_response").html("You have entered wrong credentials");
+					}
+					else
+					{
+						var user_type = result.user_type;
+						$.cookie("user_type", result.user_type);
+						$.cookie("user_email", result.user_type);
+						$.cookie("password", result.user_type);
+						$.cookie("name", result.name);
+						$.cookie("user_id", result.user_id);
+						if(user_type =='A')
+						{ window.location.replace("admin/"); }
+						else if(user_type == 'T') { window.location.replace("technician/"); }
+						else { window.location.replace("user/"); }
+					}
+				
+        }});
+      });
+	  
+	  
+	  
+	  $("#signup_btn").click(function(e){
+		  var first_name = $("#first_name").val();
+		  var last_name = $("#last_name").val();
+		  var user_type_sign = $("#user_type_sign option:selected").val();
+		  var user_email_sign = $("#user_email_sign").val();
+		  var password_sign = $("#password_sign").val();
+		  var phone_no = $("#phone_no").val();
+		  var address = $("#address").val();
+		  var country = $("#country").val();
+		  var state = $("#state").val();
+		  var city = $("#city").val();
+		  var pincode = $("#pincode").val();
+		  
+		  
+          e.preventDefault();
+			$.ajax({type: "POST",
+                url: "../bizlogic/registration_user.php",
+                data: { first_name: first_name, last_name: last_name, user_type: user_type_sign ,user_email:user_email_sign,
+				password:password_sign,phone_no:phone_no,address:address,country:country,state:state,city:city,pincode:pincode},
+                success:function(result){
+				 if(result != '')
+				 {
+					$("#regis_response").html('<b style="color:red;">'+result+'</b>');
+				 }
+				 else
+				 {
+					$("#regis_response").html('<b style="color:green;">'+result+'</b>');
+				 }
+				
+        }});
+      });
+	  
+	  
+	  
+	  
+	  $("#opt_send").click(function(e){
+		  var mobile_forgot = $("#mobile_forgot").val();
+		  var email_forgot = $("#email_forgot").val();
+		  
+          e.preventDefault();
+			$.ajax({type: "POST",
+                url: "../bizlogic/otpsend_forgotpass.php",
+                data: { phone_no: mobile_forgot, user_email: email_forgot},
+                success:function(result){
+				 if(result == 0)
+				 {
+					$("#forgot_response").html('<b style="color:red;">Mobile/Email does not exist</b>');
+				 }
+				 else
+				 {
+					$("#forgot_response").html('<b style="color:green;">Please Enter Verification Code</b>');
+					$('#otp_div').show();
+					$('#newpass_div').show();
+					$('#opt_veriy').show();
+					$('#opt_send').hide();
+					//$('#change_button').html('<button class="btn_submit" id="opt_veriy">Submit</button>');
+				 }
+        }});
+      });
+	  
+	  
+	  
+	  $("#opt_veriy").click(function(e){
+		  var mobile_forgot = $("#mobile_forgot").val();
+		  var email_forgot = $("#email_forgot").val();
+		  var new_password = $("#new_password").val();
+		  var verification_code = $("#verification_code").val();
+          e.preventDefault();
+			$.ajax({type: "POST",
+                url: "../bizlogic/otpveriy_forgotpass.php",
+                data: { phone_no: mobile_forgot, user_email: email_forgot,password:new_password,verification_code:verification_code},
+                success:function(result){
+				 if(result == 0)
+				 {
+					$("#forgot_response").html('<b style="color:red;">Verification Code does not match</b>');
+				 }
+				 else
+				 {
+					$("#forgot_response").html('<b style="color:green;">New Password Successully changed.</b>');
+					$('#otp_div').hide();
+					$('#newpass_div').hide();
+					$('#opt_veriy').hide();
+					$('#opt_send').hide();
+				 }
+        }});
+      });
+    });
+	
+	
+	function hide_mobile()
+	{
+		$('#or_div').hide();
+		$('#mobile_div').hide();
+	}
+	
+	function hide_email()
+	{
+		$('#or_div').hide();
+		$('#email_div').hide();
+	}
+	
+	 $.getJSON(globalIP+"/professional/addProfile", function(result){
+		
+		 jsonList = result;
+		 
+		   $.each(jsonList.maritalStatus, function(i, field){
+              $("#APMaritalSta").append("<option value="+field.parameterid +">"+field.value+"</option>");
+            });
+		
+		   
+		   //outer list for country
+		   $.each(result.locations, function(i, field){
+			
+			   //iterating over country for states in childLocations
+			   $.each(field.childLocations, function(i, fieldValue){
+				 
+	              if (fieldValue.locationType === 4) //appending states
+	            	  {
+	            	      $("#APState").append("<option value="+fieldValue.locationId +">"+fieldValue.locationName+"</option>");
+	            	  }
+	              
+	         
+	        	  /* if (fieldValue.hasOwnProperty('childLocations')) // to check weather states has districts
+	            	{
+	                     $.each(fieldValue.childLocations, function(i, district){
+	                       if (district.locationType === 5)
+	            	          {
+	            	            $("#APDistrict").append("<option value="+district.locationId +">"+district.locationName+"</option>");
+	            	          }
+	                       
+
+	    	        	   if (district.hasOwnProperty('childLocations')) // to check weather district has cities or areas
+	    	        		   {
+	    	        		     $.each(district.childLocations, function(i, city){
+	    	                         if (city.locationType === 6 || city.locationType === 7 )
+	    	            	            {
+	    	            	               $("#APtw").append("<option value="+city.locationId +">"+city.locationName+"</option>");
+	    	            	             }
+	    	        		         }); 
+	    	        		   }
+	                       
+	                      }); 
+	                  }*/
+	            
+	            
+	             }); 
+			   
+             });
+		   
+		   $.each(result.categories, function(i, field){
+	              $("#APCat").append("<option value="+field.catId +">"+field.displayName+"</option>");
+	              
+	             /* if (field.hasOwnProperty('subCategoryList')) // to check weather district has cities or areas
+       		           {
+       		               $.each(field.subCategoryList, function(i, subCat){
+                              
+           	                     $("#APSubCat").append("<option value="+subCat.subCatId +">"+subCat.displayName+"</option>");
+           	                      
+       		               }); 
+       		           }*/
+	           });
+		   
+      });
+
+	
+	 
+	 $("#APCat").change(function(e){
+		 var catId = $(this).val();
+		 $("#APSubCat").empty();
+		  $.each(jsonList.categories, function(i, field){
+			
+			  if (field.catId == catId) 
+				  {
+				  
+                    if (field.hasOwnProperty('subCategoryList')) // to check weather district has cities or areas
+   		                {
+                    	 $.each(field.subCategoryList, function(i, subCat){
+                             $("#APSubCat").append("<option value="+subCat.subCatId +">"+subCat.displayName+"</option>");
+       	                  }); 
+            		    }
+   		           }
+           });
+	});
+	 
+	 
+	 
+   $("#APState").change(function(e){
+		 var stateId = $(this).val();
+		   $("#APDistrict").empty();
+		     $.each(jsonList.locations, function(i, field){
+			   if (field.hasOwnProperty('childLocations')) 
+				   {   
+				   
+				     $.each(field.childLocations, function(i, states){
+                          
+				    	 if(states.locationId == stateId) {
+				    		 
+				    		 if (states.hasOwnProperty('childLocations')) {
+				    			
+				    			 $.each(states.childLocations, function(i, district){
+				    				 $("#APDistrict").append("<option value="+district.locationId +">"+district.locationName+"</option>");
+		       	                  });
+				    			  
+				    		 }
+				    	 }
+				    	 
+ 	                  }); 
+				      
+				   }
+			   
+           });   
+		 
+     });
+
+	 
+
+   $("#APDistrict").change(function(e){
+		 var distId = $(this).val();
+		   $("#APtw").empty();
+		     $.each(jsonList.locations, function(i, field){
+			    if (field.hasOwnProperty('childLocations')) 
+				   {   
+				   
+				     $.each(field.childLocations, function(i, states){
+             	    		 
+				    		 if (states.hasOwnProperty('childLocations')) {
+				    			
+				    			 $.each(states.childLocations, function(i, district){
+				    				 
+				    				 if (district.locationId == distId) {
+				    					 
+				    					 if (district.hasOwnProperty('childLocations')) {
+				    						 
+				    						 $.each(district.childLocations, function(i, city){
+							    				 $("#APtw").append("<option value="+city.locationId +">"+city.locationName+"</option>");
+					       	                  });
+				    						 
+				    						 
+				    					 }
+				    					 
+				    				 }
+				    				 
+				    				 
+		       	                  });
+				    			  
+				    		 }
+				    	 
+				    	 
+	                  }); 
+				      
+				   }
+			   
+         });   
+		 
+   });
+   
+   
+	
+	 
+    </script> 
+<script type="text/javascript">
+// initializing jQueryTab plugin 
+$('.tabs-1').jQueryTab({
+    initialTab:1,				// tab to open initially; start count at 1 not 0
+    tabInTransition: 'fadeIn',
+    tabOutTransition: 'fadeOut',
+    //cookieName: 'active-tab-1',
+    tabPosition : 'top'
+});
+</script> 
+<script>
+$(document).ready(function() {
+    // Configure/customize these variables.
+    var showChar = 500;  // How many characters are shown by default
+    var ellipsestext = "...";
+    var moretext = "more";
+    var lesstext = "less";
+    
+
+    $('.more').each(function() {
+        var content = $(this).html();
+ 
+        if(content.length > showChar) {
+ 
+            var c = content.substr(0, showChar);
+            var h = content.substr(showChar, content.length - showChar);
+ 
+            var html = c + '<span class="moreellipses">' + ellipsestext+ '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';
+ 
+            $(this).html(html);
+        }
+ 
+    });
+ 
+    $(".morelink").click(function(){
+        if($(this).hasClass("less")) {
+            $(this).removeClass("less");
+            $(this).html(moretext);
+        } else {
+            $(this).addClass("less");
+            $(this).html(lesstext);
+        }
+        $(this).parent().prev().toggle();
+        $(this).prev().toggle();
+        return false;
+    });
+});
+</script> 
+<script type="text/javascript">
+	// When the document is ready
+	$(document).ready(function () {
+		
+		$('#APMdate').datepicker({
+			format: "dd/mm/yyyy"
+		});  
+	
+	});
+</script>
+</body>
+</html>
