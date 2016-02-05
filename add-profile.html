@@ -36,7 +36,7 @@
 <div class="container-fluid">
 <div class="HeaderWrap">
 	    	<div class="LogoCon">
-   	    	<a href="index.html"><img src="././images/logo-img.png" alt="" /></a>
+   	    	<a href="index.html"><img src="./images/logo-img.png" alt="" /></a>
         </div>
         <nav class="menu">
         <div id="cssmenu">
@@ -760,6 +760,7 @@ var jsonList;
 	 $("#APCat").change(function(e){
 		 var catId = $(this).val();
 		 $("#APSubCat").empty();
+		 $("#APSubCat").append("<option value=0>Select</option>"); //added by abhidip on 5th february, 2016
 		  $.each(jsonList.categories, function(i, field){
 			
 			  if (field.catId == catId) 
@@ -777,9 +778,13 @@ var jsonList;
 	 
 	 
 	 
-   $("#APState").change(function(e){
+	 $("#APState").change(function(e){
 		 var stateId = $(this).val();
 		   $("#APDistrict").empty();
+		   $("#APtw").empty();
+		   $("#APDistrict").append("<option value=0>Select</option>"); 
+		   $("#APtw").append("<option value=0>Select</option>"); //added by abhidip on 5th february, 2016
+		   
 		     $.each(jsonList.locations, function(i, field){
 			   if (field.hasOwnProperty('childLocations')) 
 				   {   
@@ -807,9 +812,10 @@ var jsonList;
 
 	 
 
-   $("#APDistrict").change(function(e){
+	 $("#APDistrict").change(function(e){
 		 var distId = $(this).val();
 		   $("#APtw").empty();
+		   $("#APtw").append("<option value=0>Select</option>"); //added by abhidip on 5th february, 2016
 		     $.each(jsonList.locations, function(i, field){
 			    if (field.hasOwnProperty('childLocations')) 
 				   {   
@@ -846,6 +852,7 @@ var jsonList;
          });   
 		 
    });
+   
    
    
 	
