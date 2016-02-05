@@ -92,6 +92,12 @@
               </div>
               <div class="col-lg-6">
                 <div class="form-group">
+                  <label for="APContactNo">Email</label>
+                  <input type="email" class="form-control" id="APContactEmail" placeholder="Email">
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-group">
                   <label for="APMaritalSta">Marital Status</label>
                   <select class="form-control" id="APMaritalSta">
                     <option value="0">Select</option>
@@ -169,7 +175,7 @@
               <div class="col-lg-12">
                 <div class="FormTitle">Specializations</div>
                 <div class="table-responsive">
-                  <table border="0" cellpadding="0" cellspacing="0" class="table table-bordered">
+                  <table id="specializationTable" border="0" cellpadding="0" cellspacing="0" class="table table-bordered">
                     <thead>
                      <th>Name</th>
                       <th>Description</th>
@@ -201,18 +207,55 @@
                 <div class="form-group">
                   <label for="APSubCat" >Sub Category</label>
                   <select class="form-control" id="APSubCat" multiple>
-                    <option value="0">Select</option>
-                   
+                    <option value="0">Select</option>                  
                   </select>
                 </div>
-              </div>
-                
+              </div>               
               </div>
               
+              <div class="col-lg-12">		
+	                <div class="FormTitle">Publication</div>		
+	                <div class="table-responsive">		
+	                  <table id="publicationTable" border="0" cellpadding="0" cellspacing="0" class="table table-bordered">		
+	                    <thead>		
+	                     <th>Name</th>                    		
+	                      <th>Description</th>		
+	                      		
+	                        </thead>		
+	                    <tbody>		
+	                      <tr>		
+	                        <td><input type="text" class="form-control" id="" placeholder="Name"></td>                       		
+	                        <td><textarea class="form-control" placeholder="Description"></textarea></td>			                        		
+	                      </tr>			                      		
+	                    </tbody>		
+	                  </table>		
+	                </div>		
+	              </div>
+	              
+              <div class="col-lg-12">		              
+	                <div class="FormTitle">Presentation</div>		
+	                <div class="table-responsive">		
+	                  <table id="presentationTable" border="0" cellpadding="0" cellspacing="0" class="table table-bordered">		
+	                    <thead>		
+	                     <th>Name</th>                    		
+	                      <th>Description</th>		
+	                      		
+	                        </thead>		
+	                    <tbody>		
+	                      <tr>		
+	                        <td><input type="text" class="form-control" id="" placeholder="Name"></td>                       		
+	                        <td><textarea class="form-control" placeholder="Description"></textarea></td>		
+	                        		
+	                      </tr>		
+	                      		
+	                    </tbody>		
+	                  </table>		
+	                </div>		
+	              </div>
               <div class="col-lg-12">
                 <div class="FormTitle">Achievements</div>
                 <div class="table-responsive">
-                  <table border="0" cellpadding="0" cellspacing="0" class="table table-bordered">
+                  <table id="acheivementsTable" border="0" cellpadding="0" cellspacing="0" class="table table-bordered">
                     <thead>
                      <th>Name</th>                    
                       <th>Description</th>
@@ -235,7 +278,7 @@
               <div class="col-lg-12">
                 <div class="FormTitle">Experience</div>
                 <div class="table-responsive">
-                  <table border="0" cellpadding="0" cellspacing="0" class="table table-bordered">
+                  <table id="experienceTable" border="0" cellpadding="0" cellspacing="0" class="table table-bordered">
                     <thead>
                     <th>From</th>
                       <th>To</th>
@@ -243,8 +286,8 @@
                         </thead>
                     <tbody>
                       <tr>
-                        <td><input type="text" class="form-control" id="" placeholder="From"></td>
-                        <td><input type="text" class="form-control" id="" placeholder="To"></td>
+                        <td><input  type="text" placeholder="From" class="form-control"  id="experienceFrom"></td>
+                        <td><input  type="text" placeholder="To" class="form-control"  id="experienceTo"></td>
                         <td><textarea class="form-control" placeholder="Description"></textarea></td>
                       </tr>
                       
@@ -255,14 +298,16 @@
               <div class="col-lg-12">
                 <div class="FormTitle">Qualification / Academics / Education</div>
                 <div class="table-responsive">
-                  <table border="0" cellpadding="0" cellspacing="0" class="table table-bordered">
+                  <table id="qualificationTable" border="0" cellpadding="0" cellspacing="0" class="table table-bordered">
                     <thead>
+                    <th>Name</th>
                     <th>Description</th>
                       <th>Institute / University</th>
                       <th>Year</th>
                         </thead>
                     <tbody>
                       <tr>
+                        <td><input type="text" class="form-control" id="" placeholder="Name"></td>
                         <td><textarea class="form-control" placeholder="Description"></textarea></td>
                         <td><input type="text" class="form-control" id="" placeholder="Institute / University"></td>
                         <td><select class="form-control">
@@ -278,7 +323,7 @@
               <div class="col-lg-12">
                 <div class="FormTitle">Registration / Membership</div>
                 <div class="table-responsive">
-                  <table border="0" cellpadding="0" cellspacing="0" class="table table-bordered">
+                  <table id="registeredMemNosTable" border="0" cellpadding="0" cellspacing="0" class="table table-bordered">
                     <thead>
                         <th>Registration / Membership No</th>
                         <th>Registration / Membership Type</th>
@@ -290,18 +335,28 @@
                         <td><input type="text" class="form-control" id="" placeholder="Registration / Membership No"></td>
                         <td><input type="text" class="form-control" id="" placeholder="Registration / Membership Type"></td>
                         <td><input type="text" class="form-control" id="" placeholder="Registering Council / Association / Authority"></td>  
-                        <td><input type="text" class="form-control" id="" placeholder="Year"></td>  
+                        <td><select class="form-control">		                        
+	                        <option>Select Year</option>		
+	                        <option>2016</option>		
+	                        </select>		
+	                        </td>
                       </tr>
                       
                     </tbody>
                   </table>
                 </div>
               </div>
-              
-              
-              
+    <div class="col-lg-12">		              
+	              <div class="form-group">		
+	              <label><input id="emailCheck" type="checkbox" name="email" /> Do you want to recived E-mail</label>		
+	              </div>		
+	              <div class="form-group">		
+	              <label><input id="smsCheck" type="checkbox" name="sms" /> Do you want to recived SMS</label>		
+	              </div>		
+	              </div>          
+                         
               <div class="col-lg-12">
-                <button type="submit" class="btn btn-default SubmitProfInfo">Submit</button>
+                <button id="profInfoButton" type="button" class="btn btn-default SubmitProfInfo">Submit</button>
               </div>
             </form>
           </div>
@@ -680,7 +735,175 @@ var jsonList;
       });
     });
 	
-	
+    $("#profInfoButton").click(function(e){
+  	  e.preventDefault();
+		 
+		  var params = {};
+		  //params.recordId=
+		  params.profFirstName=$("#APName").val();
+			  //params.profMiddleName=
+			  params.profLastName=$("#APLastN").val();
+			  //params.profEmpId=
+			  //params.profDob=
+			  //params.profGender=
+			  params.profNationality=$("#APNation").val();	
+			  params.profPan=$("#APIncomePan").val();
+			  params.profMeritalStatus=$("#APMaritalSta").val();
+			  params.profMerriageAnniversary=$("#APMdate").val();
+                        if($("#smsCheck").is(":checked")){
+			  params.dndActivatedFlag=0;
+                        }else{
+                        params.dndActivatedFlag=1;
+                        }
+                 if($("#emailCheck").is(":checked")){
+                  params.emailStatus="true";
+                 }else{
+                  params.emailStatus="false";
+                 }
+                 params.status=$("#user_status").val();
+			  //params.profSignature=			  
+			  //params.profFees=
+			  //params.profRemark=
+			 // params.status=	
+			  //params.createdBy=
+
+		  var contact={};
+		  //contact.contactType=
+		  contact.contactPhone=$("#APContactNo").val();
+		  contact.contactEmail=$("#APContactEmail").val();
+                contact.activeStatus=1;
+	          params.contact=contact;
+
+		  var address={};
+		  //address.locationId=
+		  //address.otherArea=
+		  address.line1=$("#APresiAddress1").val();
+		  address.line2=$("#APresiAddress2").val();
+		  address.pinCode=$("#APPincode").val();
+                address.activeStatus=1;
+		  params.address=address;
+
+                var specializationList = [];
+                $("#specializationTable tr").each(function (index) { 
+                if(index !== 0){
+                 var item={};
+                  item ["profSpecName"] =$(this).find("td:eq(0) input").val();
+                  item ["profSpecDesc"] =$(this).find("td:eq(1) input").val();
+                  item ["activeStatus"] =1;
+                  specializationList.push(item);                   
+                 } 
+                });
+                params.specializationList=specializationList;
+
+		  var qualificationList = [];
+                $("#qualificationTable tr").each(function (index) { 
+                if(index !== 0){
+                 var item={};
+                  item ["profAcdmcName"] =$(this).find("td:eq(0) input").val();
+                  item ["profAcdmcDesc"] =$(this).find("td:eq(1) input").val();
+                  item ["profAcdmcUniversity"] =$(this).find("td:eq(2) input").val();
+                  item ["profAcdmcPassYear"] =$(this).find("td:eq(3) select").val();
+                  item ["activeStatus"] =1;
+                  qualificationList.push(item);                   
+                 } 
+                });
+                params.qualificationList=qualificationList;
+
+                var experienceList = [];
+                $("#experienceTable tr").each(function (index) { 
+                if(index !== 0){
+                 var item={};
+                  item ["profExpBeginDt"] =$(this).find("td:eq(0) input").val();
+                  item ["profExpEndDt"] =$(this).find("td:eq(1) input").val();
+                  item ["profExpDesc"] =$(this).find("td:eq(2) input").val();                  
+                  item ["activeStatus"] =1;
+                  experienceList.push(item);                   
+                 } 
+                });
+                params.experienceList=experienceList;
+
+                var acheivements = [];
+                $("#acheivementsTable tr").each(function (index) { 
+                if(index !== 0){
+                 var item={};                   
+                  item ["profAchvName"] =$(this).find("td:eq(0) input").val();
+                  item ["profAchvDesc"] =$(this).find("td:eq(1) input").val();
+                  item ["profAchvYear"] =$(this).find("td:eq(2) select").val();                  
+                  item ["activeStatus"] =1;
+                  acheivements.push(item);                   
+                 } 
+                });
+                params.acheivements=acheivements;
+
+                var registeredMemNos = [];
+                $("#registeredMemNosTable tr").each(function (index) { 
+                if(index !== 0){
+                 var item={};                 
+                  item ["regMemType"] =$(this).find("td:eq(1) input").val();
+                  item ["regAuth"] =$(this).find("td:eq(2) input").val();
+                  item ["regYear"] =$(this).find("td:eq(3) select").val();                  
+                  item ["activeStatus"] =1;
+                  registeredMemNos.push(item);                   
+                 } 
+                });
+                params.registeredMemNos=registeredMemNos;
+
+                var lstSubCategoryId=[];
+                $.each($("#APSubCat").val(), function( index, value ) {                
+                lstSubCategoryId.push(parseInt(value));
+                });
+                params.lstSubCategoryId=lstSubCategoryId;
+
+                var lstProfPublication = [];
+                $("#publicationTable tr").each(function (index) { 
+                if(index !== 0){  
+                 var item={};                 
+                  item ["profPublicationName"] =$(this).find("td:eq(0) input").val();                                    
+                   
+                var lstPublicationDetails=[];
+                var item1={};
+                item1["publicationDesc"] =$(this).find("td:eq(1) textarea").val(); 
+                 lstPublicationDetails.push(item1);
+                 item ["lstPublicationDetails"] =lstPublicationDetails; 
+                  item ["activeStatus"] =1; 
+                  lstProfPublication.push(item);                   
+                 } 
+                });
+                params.lstProfPublication=lstProfPublication;
+
+                var lstProfPresentation = [];
+                $("#presentationTable tr").each(function (index) { 
+                if(index !== 0){  
+                 var item={};                 
+                  item ["profPresentationName"] =$(this).find("td:eq(0) input").val();                                    
+                   
+                var lstPresentationDesc=[];
+                var item1={};
+                item1["presentationDesc"] =$(this).find("td:eq(1) textarea").val(); 
+                 lstPresentationDesc.push(item1);
+                 item ["lstPresentationDesc"] =lstPresentationDesc; 
+                  item ["activeStatus"] =1; 
+                  lstProfPresentation.push(item);                   
+                 } 
+                });
+                params.lstProfPresentation=lstProfPresentation;
+
+		  alert(JSON.stringify(params));
+              
+	        $.ajax({
+              type: "POST",             
+              url: globalIP +"/professional/saveProfile",
+              
+              data: JSON.stringify(params),
+              contentType: "application/json",
+	        dataType: "application/json",
+              success:function(data){
+				alert(data);				
+              }
+             });
+
+            });  
+    
 	function hide_mobile()
 	{
 		$('#or_div').hide();
@@ -916,6 +1139,12 @@ $(document).ready(function() {
 		$('#APMdate').datepicker({
 			format: "dd/mm/yyyy"
 		});  
+		 $('#experienceFrom').datepicker({
+				format: "dd/mm/yyyy"
+			});  
+	                $('#experienceTo').datepicker({
+				format: "dd/mm/yyyy"
+			});  
 	
 	});
 </script>
