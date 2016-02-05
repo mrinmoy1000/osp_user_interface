@@ -523,6 +523,7 @@
             <!--<div class="text-center">
  Don't have an account? <a data-dismiss="modal" data-toggle="modal" href="#Modal-login" >Login</a>
   </div>--> 
+           <input type="hidden" id="user_status" name="user_status" />
           </div>
         </form>
       </div>
@@ -695,6 +696,8 @@ var jsonList;
 	 $.getJSON(globalIP+"/professional/addProfile", function(result){
 		
 		 jsonList = result;
+		 
+		 $("#user_status").val(result.paramId);
 		 
 		   $.each(jsonList.maritalStatus, function(i, field){
               $("#APMaritalSta").append("<option value="+field.parameterid +">"+field.value+"</option>");
