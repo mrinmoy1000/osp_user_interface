@@ -20,31 +20,20 @@
 					if(result.returnStatus =="success")
 					{
 						$("#Modal-login").hide();
-						if(result.returnMessage=="view")
-							{
-							$.ajax({type: "GET",
-				                url: "./profile.html",
-				                success:function(result)
-				                {
-				                	$("#myCarousel2").html(result);
-				                }
-							});
-				                
-							}
-						if(result.returnMessage=="view")
-							{
-							$.ajax({type: "GET",
-				                url: "./profile.html",
-				                data:JSON.stringify( { 
-				                	"userName": result.userId}),
-				                success:function(result){}
-							});
-							
-							}
-						if(result.returnMessage=="ADMIN")
+						
+						if(result.returnMessage=="view" && result.typeId=='23')
 						{
-							window.location.replace("./admin.html");						
+							window.location.replace("./profile.html?recordId="+result.userId);	
 						}
+						else if(result.returnMessage=="add" && result.typeId=='23')
+						{
+							window.location.replace("./add-profile.html?recordId="+result.userId);	
+						}
+						else if(result.returnMessage=="ADMIN" && result.typeId=='50')
+						{
+							window.location.replace("./admin.html?recordId="+result.userId);						
+						}
+						
 						
 						
 					}
@@ -135,5 +124,17 @@
 // 				 }
         }});
       });
+      
+      
+   // for other user type admin or client or prof add parameter
+      function getForwardURL(recordType){
+    	  
+    	 
+    	  if(recordType=='23')
+    		  return  "recordId=";
+    	  else if(recordType=='50')
+    		  return  "profId=";
+    	  
+      } 
 
     }
