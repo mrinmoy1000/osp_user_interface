@@ -64,10 +64,13 @@
   <div class="container">
     <div class="row SubPageInn">
       <div class="col-lg-9">
-        <div class="col-lg-4 ProfImg"> <img src="images/profile.png" /> </div>
-        <div class="col-lg-8 ProfImg">
+        <div class="col-lg-4 ProfImg"> <img src="images/profile.png" id="picSrc"/> </div>
+        <div class="col-lg-8 ProfImg" id="uploadMsg">
+        <form id="uploadForm" method="post" enctype="multipart/form-data">	
           <label class="control-label">Select File</label>
-          <input id="input-1" type="file" class="file">
+          <input id="inputmypic" type="file" class="file" name="uploadedFile" accept=".jpeg" />
+          <input type="button" value="Upload" id="uploadbutton"/>		   
+        </form>  
         </div>
         <div class="col-lg-12 ProfDetails AddProf">
           <div class="row">
@@ -1147,6 +1150,42 @@ $(document).ready(function() {
 			});  
 	
 	});
+	
+	
+	function getParameterByName(name) {
+	    url = window.location.href;
+	    name = name.replace(/[\[\]]/g, "\\$&");
+	    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+	        results = regex.exec(url);
+	    if (!results) return null;
+	    if (!results[2]) return '';
+	    return decodeURIComponent(results[2].replace(/\+/g, " "));
+	}
+	
+	$("#uploadbutton").on("click", function() {
+		var formData = new FormData($('#uploadForm')[0]);
+		formData.append('recordId', getParameterByName('recordId'));
+		alert(globalIP+"/uploadPhoto");
+		$.ajax({
+		    url: globalIP+"/uploadPhoto",
+		    data: formData,
+		    type: "POST",
+		    dataType: 'text',
+		    contentType: false,
+		    processData: false,
+		    cache: false,
+		    success: function(response) {
+		    	//console.log(response);
+		    	response=JSON.parse(response);
+		        $('#uploadMsg').html(response.result);
+		        $('#picSrc').attr("src",response.filePath);
+		    },
+		    error: function() {
+		    	 $('#uploadMsg').html('Upload Failed!');
+		    }
+		});	
+	})
+	
 </script>
 </body>
 </html>

@@ -386,7 +386,7 @@ $(document).ready(function() {
   
 	var recordId = getParameterByName('recordId');
  	$.ajax({type: "GET",
-        url: "../professional/viewProfilebyRecord?recordId="+recordId,
+        url: globalIP+"/professional/viewProfilebyRecord?recordId="+recordId,
        // data:JSON.stringify({"profId": profId}),
         datatype : "application/json",
         success:function(result){
