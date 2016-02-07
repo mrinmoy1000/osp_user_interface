@@ -1177,8 +1177,9 @@ $(document).ready(function() {
 		    success: function(response) {
 		    	//console.log(response);
 		    	response=JSON.parse(response);
-		        $('#uploadMsg').html(response.result);
-		        $('#picSrc').attr("src",response.filePath);
+		        	$('#uploadMsg').html(response.result);
+		        if(response.result=='Uploaded Succesfully')
+		        	$('#picSrc').attr("src",response.filePath);
 		    },
 		    error: function() {
 		    	 $('#uploadMsg').html('Upload Failed!');
