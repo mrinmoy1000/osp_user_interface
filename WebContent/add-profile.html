@@ -127,6 +127,21 @@
               </div>
               <div class="col-lg-6">
                 <div class="form-group">
+                  <label for="APGender">Gender</label>
+                  <select class="form-control" id="APGender">
+                    <option value="0">Select</option>
+                  
+                  </select>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <label for="APBirthday">Date of Birth</label>
+                  <input  type="text" placeholder="Date of Birth" class="form-control"  id="APBirthday">
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-group">
                   <label for="APMaritalSta">Marital Status</label>
                   <select class="form-control" id="APMaritalSta">
                     <option value="0">Select</option>
@@ -678,7 +693,9 @@ var recordId = getParameterByName('recordId');
               $("#APMaritalSta").append("<option value="+field.parameterid +">"+field.value+"</option>");
             });
 		
-		   
+		   $.each(jsonList.genders, function(i, field){
+	             $("#APGender").append("<option value="+field.parameterid +">"+field.value+"</option>");
+	           });
 		   //outer list for country
 		   $.each(result.locations, function(i, field){
 			
@@ -830,6 +847,7 @@ var recordId = getParameterByName('recordId');
          });   
 		 
    });
+    });
    
    
    
@@ -890,7 +908,10 @@ $(document).ready(function() {
 		
 		$('#APMdate').datepicker({
 			format: "dd/mm/yyyy"
-		});  
+		}); 
+		$('#APBirthday').datepicker({
+			format: "dd/mm/yyyy"
+		}); 
 		 $('#experienceFrom').datepicker({
 				format: "dd/mm/yyyy"
 			});  

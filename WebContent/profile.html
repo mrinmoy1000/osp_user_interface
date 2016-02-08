@@ -6,7 +6,7 @@
 
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="css/bootstrap.min.css">
-
+ <script src="./js/global.js"></script>
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="css/custom-style.css">
 <link rel="stylesheet" href="css/themify-icons.css">
@@ -58,6 +58,77 @@
 	</div>
 </div>
 
+<div class="SubPageWrap">
+	<div class="container">
+    	<div class="row SubPageInn">
+       	  <div class="col-lg-9">
+            	<div class="col-lg-2">
+            	<div class="ProfImg"><img src="images/profile.png" /></div>
+           	  		
+              	</div>
+                <div class="col-lg-10">
+                    <div class="ProfDetails">
+                	<div class="ProfName"></div>
+                	<div class="ProfLastName"></div>
+                    <div class="Profcontact"></div>
+                    <div class="APContactEmail"></div>
+                    <div class="specializationName"></div>             	
+                	<div class="ProfQualifications"></div>
+                    <div class="ProfNationality"></div>                
+                    <div class="ProfExperience"></div>
+                    <!-- <div class="ProfDOB"><label>12th January 1965</label></div>                    
+                    <div class="ProfForm"><label></label></div>
+                    <div class="ProfExperience"><label></label></div>-->
+                    <div id="textshow" style="display:none;">
+                    <div class="">
+                        <div class="FormTitle">Residential Address</div>
+                        <div class="">
+                        <ol>
+                        <li><label>Garia</label><br />
+                        <span>Kolkata, West Bengal</span><br />
+                        <span>700084</span></li>
+                        
+                        </ol>
+                        </div>
+                
+                        </div>
+                        <div class="">
+                        <div class="FormTitle">Achievements</div>
+                        <div class="">
+                        <ol>
+                        <li><label>Web Star</label><br />
+                        <span>Something that has been done or achieved through effort : a result of hard work</span><br />
+                        <span>2015</span></li>
+                        <li><label>Build Star</label><br />
+                        <span>The act of achieving something : the state or condition of having achieved or accomplished something</span><br />
+                        <span>2014</span></li>
+                        </ol>
+                        </div>
+                
+                        </div>
+                    </div>
+                    <div class="ProfDesc more"><a id="seemore" onclick="toggleSeeMore()" href="javascript:void(0);">See More</a></div>
+                </div>
+                </div>
+                <div class="col-lg-12 ProfTab">
+                	<div class="">
+					</div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+            	
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
 <div class="container-fluid SubPageWrap">
 	<div class="container">
     	<div class="row SubPageInn">
@@ -66,14 +137,7 @@
            	  		<img src="images/profile.png" />
               	</div>
                 <div class="col-lg-10 ProfDetails">
-                	<div class="ProfName"></div>
-                	<div class="ProfLastName"></div>
-                	 <div class="ProfQualifications"></div>
-                    <div class="specializationName"></div>
-                    <div class="ProfQualificatio"></div>
-                    <div class="ProfNationality"></div>
-                    <div class="APContactEmail"></div>
-                    <div class="ProfExperience"></div>
+
                     <div class="ProfDesc more">more</div>
                 </div>
                 <div class="col-lg-12 ProfTab">
@@ -387,19 +451,20 @@ $(document).ready(function() {
     var showChar = 500;  // How many characters are shown by default
   
     var recordId = getParameterByName('recordId');
-	$.ajax({type: "GET",
+	$.ajax({
+		type: "GET",
         url: globalIP+"/professional/viewProfilebyRecord",
        data:{"recordId": recordId},
         datatype : "application/json",
         success:function(result){
-        	$(".ProfName").append(result.profFirstName);
-        	$(".ProfLastName").append(result.profLastName);
-        	$(".specializationName").append(result.specializationList[0].profSpecName);
-        	$(".ProfQualifications").append(result.qualificationList[0].profAcdmcName);
-        	$(".APContactEmail").append(result.contactList[0].contactEmail);
-        	$(".ProfExperience").append(result.experienceList[0].profExpDesc);
+        	$(".ProfName").append("<label>"+result.profFirstName+"</label>");
+        	$(".ProfLastName").append("<label>"+result.profLastName+"</label>");
+        	$(".specializationName").append("<label>"+result.specializationList[0].profSpecName+"</label>");
+        	$(".ProfQualifications").append("<label>"+result.qualificationList[0].profAcdmcName+"</label>");
+        	$(".APContactEmail").append("<label>"+result.contactList[0].contactEmail+"</label>");
+        	$(".ProfExperience").append("<label>"+result.experienceList[0].profExpDesc+"</label>");
      //   	$("#APMaritalSta option[value='"+result.profMeritalStatus+"']").attr("selected","selected");
-        	$(".ProfNationality").append(result.profNationality);
+        	$(".ProfNationality").append("<label>"+result.profNationality+"</label>");
         //	$("#APresiAddress1").val(result.addressList[0].line1);
         //	$("#APresiAddress2").val(result.addressList[0].line2);
         //	$("#APPincode").val(result.addressList[0].pinCode);
