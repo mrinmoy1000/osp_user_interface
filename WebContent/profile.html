@@ -67,10 +67,12 @@
               	</div>
                 <div class="col-lg-10 ProfDetails">
                 	<div class="ProfName"></div>
-                    <div class="ProfQualifications"></div>
+                	<div class="ProfLastName"></div>
+                	 <div class="ProfQualifications"></div>
+                    <div class="specializationName"></div>
+                    <div class="ProfQualificatio"></div>
                     <div class="ProfNationality"></div>
-                    <div class="ProfDOB"></div>
-                    <div class="ProfForm"></div>
+                    <div class="APContactEmail"></div>
                     <div class="ProfExperience"></div>
                     <div class="ProfDesc more">more</div>
                 </div>
@@ -384,16 +386,27 @@ $(document).ready(function() {
     // Configure/customize these variables.
     var showChar = 500;  // How many characters are shown by default
   
-	var recordId = getParameterByName('recordId');
- 	$.ajax({type: "GET",
-        url: globalIP+"/professional/viewProfilebyRecord?recordId="+recordId,
-       // data:JSON.stringify({"profId": profId}),
+    var recordId = getParameterByName('recordId');
+	$.ajax({type: "GET",
+        url: globalIP+"/professional/viewProfilebyRecord",
+       data:{"recordId": recordId},
         datatype : "application/json",
         success:function(result){
-        	$(".ProfName").append(result.profFirstName+"  "+result.profLastName);
+        	$(".ProfName").append(result.profFirstName);
+        	$(".ProfLastName").append(result.profLastName);
+        	$(".specializationName").append(result.specializationList[0].profSpecName);
+        	$(".ProfQualifications").append(result.qualificationList[0].profAcdmcName);
+        	$(".APContactEmail").append(result.contactList[0].contactEmail);
+        	$(".ProfExperience").append(result.experienceList[0].profExpDesc);
+     //   	$("#APMaritalSta option[value='"+result.profMeritalStatus+"']").attr("selected","selected");
         	$(".ProfNationality").append(result.profNationality);
-        	}
-        });
+        //	$("#APresiAddress1").val(result.addressList[0].line1);
+        //	$("#APresiAddress2").val(result.addressList[0].line2);
+        //	$("#APPincode").val(result.addressList[0].pinCode);
+        	
+        	
+        }
+        	});
     var ellipsestext = "...";
     var moretext = "more";
     var lesstext = "less";
