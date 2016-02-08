@@ -44,7 +44,18 @@
         <ul>
         
             	<li><a href="#"><span class="ti-search"></span></a></li>
-                <li><a data-toggle="modal" data-target="#Modal-login" href="#"><span class="ti-user"></span></a></li>
+                <!--<li><a data-toggle="modal" data-target="#Modal-login" href="#"><span class="ti-user"></span></a></li>-->
+                <li><a href="#"><span class="ti-user"></span></a>
+                <ul>
+                <li>Welcome to John Smith</li>
+                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        </li>                        
+                        <li><a href="#"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                    </ul>
+                </li>
                 <li><a href="#"><span class="ti-comments"></span></a></li>
         </ul>
       </div>
@@ -53,7 +64,18 @@
             <li><a href="#">Library & Store</a></li>
                 <li><a href="#">Archive</a></li>
             	<li class="hidden-xs"><a href="#"><span class="ti-search"></span></a></li>
-                <li class="hidden-xs"><a data-toggle="modal" data-target="#Modal-login" href="#"><span class="ti-user"></span></a></li>
+                <!--<li class="hidden-xs"><a data-toggle="modal" data-target="#Modal-login" href="#"><span class="ti-user"></span></a></li>-->
+                <li class="hidden-xs"><a href="#"><span class="ti-user"></span></a>
+                <ul>
+               
+                        <li>Welcome to John Smith</li>
+                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a></li>
+                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        </li>                        
+                        <li><a href="#"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                    </ul>
+                </li>
                 <li class="hidden-xs"><a href="#"><span class="ti-comments"></span></a></li>
             </ul>
     </div>
@@ -64,8 +86,11 @@
   <div class="container">
     <div class="row SubPageInn">
       <div class="col-lg-9">
-        <div class="col-lg-4 ProfImg"> <img src="images/profile.png" id="picSrc"/> </div>
-        <div class="col-lg-8 ProfImg" >
+        <div class="col-lg-4">
+        <div class="ProfImg">
+         <img src="images/profile.png" id="picSrc"/> 
+         </div> </div>
+        <div class="col-lg-8" >
         <div class="form-group" id="uploadMsg"></div>
         <form id="uploadForm" method="post" enctype="multipart/form-data">	
           <label class="control-label">Select File</label>
@@ -416,180 +441,7 @@
   <div class="CopyTxt"> Copyright &copy; 2016 Company Name Private Limited. All rights reserved. </div>
 
 
-<!-- Modal Start-->
-<div class="modal fade" id="Modal-login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h2 class="text-center">Login</h2>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-close"></i></button>
-      </div>
-      <div class="modal-body">
-        <form name="form1" method="post" action="" >
-          <div class="form-group">
-            <div class="input-group"> <span class="input-group-addon" id="basic-addon1"><i class="fa fa-send-o"></i></span>
-              <select class="form-control" id="user_select">
-                <option value="T">Admin</option>
-                <option value="C">Client</option>
-                <option value="A">Professional</option>
-                <option value="b">Farmer</option>
-              </select>
-            </div>
-          </div>
-          <div class="form-group">
-            <div class="input-group"> <span class="input-group-addon" id="basic-addon1"><i class="fa fa-user"></i></span>
-              <input type="text" class="form-control" placeholder="User Name" name="user_email" id="user_email" aria-describedby="basic-addon1" required >
-            </div>
-          </div>
-          <div class="form-group">
-            <div class="input-group"> <span class="input-group-addon" id="basic-addon1"><i class="fa fa-lock"></i></span>
-              <input type="password" class="form-control" placeholder="Password" name="password" id="password" aria-describedby="basic-addon1" required >
-            </div>
-            <div id="login_response" style="color:red;"></div>
-          </div>
-          <div class="form-group">
-            <label>
-              <input type="checkbox">
-              Remember Me</label>
-            <a href="#Modal-forgotpassword" data-toggle="modal" data-dismiss="modal" class="pull-right">Forgot password?</a> </div>
-          <div class="form-group text-center">
-            <button class="btn_submit btn btn-default FullWidth OrgBtn" id="login_btn">Submit</button>
-          </div>
-          <div class="text-center">Don’t have an account? <a  href="#Modal-register" data-toggle="modal" data-dismiss="modal">Sign Up</a></div>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Modal End--> 
-<!-- Model forgot-password start -->
-<div class="modal fade" id="Modal-forgotpassword" tabindex="-1" role="dialog" aria-labelledby="Modal-forgotpassword" aria-hidden="true">
-  <div class="modal-dialog">
-    <form name="form2" method="post" action="">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2 class="text-center ">Forgot Password</h2>
-          <p class="text-center">Don't worry, it happens to the best of us.</p>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-close"></i></button>
-        </div>
-        <div class="modal-body">
-          <div class="form-group">
-            <div class="input-group" id="email_div"> <span class="input-group-addon" id="basic-addon1"><i class="fa fa-user"></i></span>
-              <input type="text" class="form-control" placeholder="User Name" name="email_forgot" id="email_forgot" onclick="hide_mobile()" aria-describedby="basic-addon1" required >
-            </div>
-            <div class="input-group" id="otp_div"> <span class="input-group-addon" id="basic-addon1"><i class="fa fa-envelope-o"></i></span>
-              <input type="password" class="form-control" placeholder="Verification Code" name="verification_code" id="verification_code"  aria-describedby="basic-addon1" required >
-            </div>
-            <div class="input-group" id="newpass_div"> <span class="input-group-addon" id="basic-addon1"><i class="fa fa-envelope-o"></i></span>
-              <input type="password" class="form-control" placeholder="Set Password" name="new_password" id="new_password" aria-describedby="basic-addon1" required >
-            </div>
-            <div class="col-md-6 col-sm-6">
-              <div class="form-group">
-                <div id="forgot_response"></div>
-              </div>
-            </div>
-          </div>
-          <div class="form-group text-center" id="change_button">
-            <button class="btn_submit btn btn-default FullWidth OrgBtn" id="opt_send">Submit</button>
-            <button class="btn_submit" id="opt_veriy">Submit</button>
-          </div>
-          <div class="text-center"> Don't have an account? <a data-dismiss="modal" data-toggle="modal" href="#Modal-login" >Login</a> </div>
-        </div>
-      </div>
-    </form>
-  </div>
-</div>
-<!-- Modal forgot-password end --> 
 
-<!-- Modal- register start -->
-<div class="modal fade" id="Modal-register" tabindex="-2" role="dialog" aria-labelledby="Modal-register" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h2 class="text-center">Registration</h2>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-close"></i></button>
-      </div>
-      <div class="modal-body">
-        <form name="form3" method="post" action="" id="signupForm">
-          <div class="row">
-            <div class="col-md-6 col-sm-6">
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="First Name" name="first_name" id="first_name" required >
-              </div>
-            </div>
-            <div class="col-md-6 col-sm-6">
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Last Name" name="last_name" id="last_name" required >
-              </div>
-            </div>
-            <div class="col-md-6 col-sm-6">
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="User Name" name="user_email" id="user_email" aria-describedby="basic-addon1" required >
-              </div>
-            </div>
-            <div class="col-md-6 col-sm-6">
-              <div class="form-group">
-                <select class="form-control" name="user_type_sign" id="user_type_sign" required >
-                  <option>Select User Type</option>
-                  <option value="T">Admin</option>
-                  <option value="C">Client</option>
-                  <option value="A">Professional</option>
-                  <option value="b">Farmer</option>
-                  <!--<option value="T">Technician</option>
-<option value="C">User</option>-->
-                </select>
-              </div>
-            </div>
-            <div class="col-md-6 col-sm-6">
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Email" name="user_email_sign" id="user_email_sign" required >
-              </div>
-            </div>
-            <div class="col-md-6 col-sm-6">
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Phone No" name="phone_no" id="phone_no" required >
-              </div>
-            </div>
-            <div class="col-md-6 col-sm-6">
-              <div class="form-group">
-                <input type="password" class="form-control" placeholder="Password" name="password_sign" id="password_sign" required >
-              </div>
-            </div>
-            <div class="col-md-6 col-sm-6">
-              <div class="form-group">
-                <input type="password" class="form-control" placeholder="Confirm Password" name="confirm_password" id="confirm_password" required >
-              </div>
-            </div>
-          
-            
-            <div class="col-md-6 col-sm-6">
-              <div class="form-group">
-                <div id="regis_response"></div>
-              </div>
-            </div>
-            <div class="col-md-12 col-sm-12">
-              <div class="form-group">
-                <input type="checkbox">
-                <label>I Agree to our <a href="#">Terms and Conditions</a> and our <a href="#">Privacy Policy</a>.</label>
-              </div>
-            </div>
-            <div class="col-md-12 col-sm-12">
-              <div class="form-group text-center">
-                <button class="btn_submit btn btn-default FullWidth OrgBtn" id="signup_btn">Submit</button>
-              </div>
-            </div>
-            
-            <!--<div class="text-center">
- Don't have an account? <a data-dismiss="modal" data-toggle="modal" href="#Modal-login" >Login</a>
-  </div>--> 
-           <input type="hidden" id="user_status" name="user_status" />
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Modal- register start --> 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
 

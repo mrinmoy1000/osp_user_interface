@@ -134,7 +134,8 @@ button:focus { outline:none;}
 .SubPageWrap { min-height:500px; background:#F4F4F4;}
 .SubPageInn { padding:20px 0px;}
 
-.ProfImg { padding-bottom:20px; }
+.ProfImg { margin-bottom:20px; width:100px; height:100px; overflow:hidden; }
+.ProfImg img {width:100%;}
 .ProfDetails { }
 .ProfName {font-size: 26px; }
 .ProfQualifications { font-size:16px; padding-top:5px;}
@@ -174,17 +175,19 @@ border:3px solid rgba(0, 0, 0, 0.1); }
 #cssmenu:after, #cssmenu > ul:after { content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0 }
 #cssmenu #head-mobile { display: none }
 #cssmenu > ul { float: right; font-size:17px; margin:0;}
-#cssmenu > ul > li { float: left; display: inline-block; position: relative; -webkit-transition: all .5s ease; -ms-transition: all .5s ease; transition: all .5s ease; padding: 22px 0; border-left: 1px solid #909090;background: rgba(255,255,255,0.5);}
+#cssmenu > ul > li { float: left; display: inline-block; position: relative; transition: all .5s ease; -webkit-transition: all .5s ease; -ms-transition: all .5s ease;  padding: 0; border-left: 1px solid #909090;background: rgba(255,255,255,0.5);}
 #cssmenu > ul li:first-child {border-left:none;}
 #cssmenu > ul li:nth-child(2) {border-left:none;}
-#cssmenu > ul > li > a {color:#222; padding:0 25px;}
+#cssmenu > ul > li > a {color:#222; padding:22px 25px;}
 #cssmenu > ul > li:hover > a, #cssmenu ul li.active a { color: #999; }
 #cssmenu > ul > li.has-sub > a { padding-right: 30px }
 #cssmenu > ul > li.has-sub > a:after { position: absolute; top: 35%; right: 12px; display: block; content: "\f107"; font-family: 'FontAwesome'; }
 #cssmenu ul ul { position: absolute; left: -9999px; z-index: 9999; }
-#cssmenu ul ul li { height: 0; -webkit-transition: all .25s ease; -ms-transition: all .25s ease; background: #333; transition: all .25s ease }
-#cssmenu ul ul li:hover { }
-#cssmenu li:hover > ul { left: auto }
+#cssmenu ul ul li { -webkit-transition: all .25s ease; -ms-transition: all .25s ease; background: #333; transition: all .25s ease }
+/*#cssmenu ul ul li:hover { }*/
+#cssmenu li:hover > ul { left:auto; }
+#cssmenu li ul li:first-child {padding:10px;}
+#cssmenu li:nth-child(4):hover ul {right:0; }
 #cssmenu li:hover > ul > li { min-height: 35px }
 #cssmenu ul ul ul { margin-left: 100%; top: 0 }
 #cssmenu ul ul li a { border-bottom: 1px solid rgba(150,150,150,0.15); padding: 11px 15px; width: 170px; font-size: 15px; text-decoration: none; color: #ddd; }

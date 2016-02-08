@@ -21,12 +21,12 @@
 	<!-- jQuery multiselect -->
 
 <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="./css/bootstrap.min.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
 
 <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="./css/custom-style.css">
-<link rel="stylesheet" href="./css/themify-icons.css">
-
+<link rel="stylesheet" href="css/custom-style.css">
+<link rel="stylesheet" href="css/themify-icons.css">
+<link rel="stylesheet" href="css/responsive.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -67,8 +67,18 @@
 					<div id="head-mobile">
 						<ul>
 							<li><a href="#"><span class="ti-search"></span></a></li>
-							<li><a data-toggle="modal" data-target="#Modal-login"
-								href="#"><span class="ti-user"></span></a></li>
+							<!--<li class="hidden-xs"><a data-toggle="modal" data-target="#Modal-login" href="#"><span class="ti-user"></span></a></li>-->
+                <li><a href="#"><span class="ti-user"></span></a>
+                <ul>
+               
+                        <li>Welcome to John Smith</li>
+                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a></li>
+                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        </li>                        
+                        <li><a href="#"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                    </ul>
+                </li>
 							<li><a href="#"><span class="ti-comments"></span></a></li>
 						</ul>
 					</div>
@@ -77,8 +87,18 @@
 						<li><a href="#">Library & Store</a></li>
 						<li><a href="#">Archive</a></li>
 						<li class="hidden-xs"><a href="#"><span class="ti-search"></span></a></li>
-						<li class="hidden-xs"><a data-toggle="modal"
-							data-target="#Modal-login" href="#"><span class="ti-user"></span></a></li>
+						<!--<li class="hidden-xs"><a data-toggle="modal" data-target="#Modal-login" href="#"><span class="ti-user"></span></a></li>-->
+                <li class="hidden-xs"><a href="#"><span class="ti-user"></span></a>
+                <ul>
+               
+                        <li>Welcome to John Smith</li>
+                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a></li>
+                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        </li>                        
+                        <li><a href="#"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                    </ul>
+                </li>
 						<li class="hidden-xs"><a href="#"><span class="ti-comments"></span></a></li>
 					</ul>
 				</div>
@@ -925,7 +945,8 @@
 							</div>
 							<div class="col-md-12 col-sm-12">
 								<div class="form-group">
-									<input type="checkbox"> <label>I Agree to your <a href="#">Terms and Conditions</a> and our <a href="#">Privacy
+									<input type="checkbox"> <label>I Agree to our <a
+											href="#">Terms and Conditions</a> and our <a href="#">Privacy
 												Policy</a>.
 									</label>
 								</div>

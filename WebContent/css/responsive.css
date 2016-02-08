@@ -26,8 +26,10 @@ img {max-width:100%;}
 #cssmenu ul{width:100%;display:none}
 #cssmenu ul li{width:100%;border-top:1px solid #444}
 #cssmenu ul li:hover{background:#363636;}
+#cssmenu ul li ul{position:absolute;}
+#cssmenu ul.open {top:30px;}
 #cssmenu ul ul li,#cssmenu li:hover > ul > li{height:auto}
-#cssmenu ul li a,#cssmenu ul ul li a{width:100%;border-bottom:0}
+#cssmenu ul li a,#cssmenu ul ul li a{/*width:100%;*/border-bottom:0}
 #cssmenu > ul > li{float:none}
 #cssmenu ul ul li{background:#333!important;}
 #cssmenu ul ul li:hover{background:#363636!important}
@@ -37,9 +39,9 @@ img {max-width:100%;}
 #cssmenu ul ul,#cssmenu ul ul ul{position:relative;left:0;width:100%;margin:0;text-align:left;}
 #cssmenu > ul > li.has-sub > a:after,#cssmenu > ul > li.has-sub > a:before,#cssmenu ul ul > li.has-sub > a:after,#cssmenu ul ul > li.has-sub > a:before{display:none}
 #cssmenu #head-mobile{display:block; margin-right: 55px;}
-#cssmenu #head-mobile ul {display:block !important;}
-#cssmenu #head-mobile ul li {float:right; width:auto; border-top:none;/* border-left: 1px solid #ddd;*/}
-/*#cssmenu #head-mobile ul li:first-child { border-right: 1px solid #ddd;}*/
+#cssmenu #head-mobile > ul {display:block !important;}
+#cssmenu #head-mobile ul li {float:right; width:auto; border-top:none; display:inline-block;/* border-left: 1px solid #ddd;*/}
+#cssmenu #head-mobile ul li ul li {float:right; min-width:190px; width:auto;border-top:none; display:block;/* border-left: 1px solid #ddd;*/}
 #cssmenu #head-mobile ul li a {padding:10px;}
 #cssmenu #head-mobile ul li:hover {background-color:transparent;}
 .button{width:40px;height:33px;position:absolute;right:4px;top:3px;cursor:pointer;z-index: 12399994; border:1px solid #999; border-radius:4px;}
@@ -47,12 +49,12 @@ img {max-width:100%;}
 .button:before{-webkit-transition:all .3s ease;-ms-transition:all .3s ease;transition:all .3s ease;position:absolute;top:8px;right:9px;display:block;height:2px;width:20px;background:#999;content:''}
 .button.menu-opened:after{-webkit-transition:all .3s ease;-ms-transition:all .3s ease;transition:all .3s ease;top:15px;border:0;height:2px;width:19px;-webkit-transform:rotate(45deg);-moz-transform:rotate(45deg);-ms-transform:rotate(45deg);-o-transform:rotate(45deg);transform:rotate(45deg); background:#999;}
 .button.menu-opened:before{top:15px;width:19px;-webkit-transform:rotate(-45deg);-moz-transform:rotate(-45deg);-ms-transform:rotate(-45deg);-o-transform:rotate(-45deg);transform:rotate(-45deg); background:999;}
-#cssmenu .submenu-button{position:absolute;z-index:99;right:0;top:0;display:block;border-left:1px solid #444;cursor:pointer}
+#cssmenu .submenu-button{position:absolute;z-index:99;right:-20px;top:0;display:block;border-left:1px solid #444;cursor:pointer}
 #cssmenu .submenu-button.submenu-opened{background:#262626}
 #cssmenu ul ul .submenu-button{height:34px;width:34px}
 #cssmenu .submenu-button:after{position:absolute;top:22px;right:19px;width:8px;height:2px;display:block;background:#999;content:''}
 #cssmenu ul ul .submenu-button:after{top:15px;right:13px}
-#cssmenu .submenu-button.submenu-opened:after{background:#fff}
+#cssmenu .submenu-button.submenu-opened:after{background:#000; right:20px;}
 #cssmenu .submenu-button:before{position:absolute;top:19px;right:22px;display:block;width:2px;height:8px;background:#999;content:''}
 #cssmenu ul ul .submenu-button:before{top:12px;right:16px}
 #cssmenu .submenu-button.submenu-opened:before{display:none}
