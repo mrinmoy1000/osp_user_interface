@@ -6,6 +6,12 @@
 
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	
+	<!-- -jquery validation plugins -->
+	<script src="./js/jquery.validate.js"></script>
+	<script src="./js/jquery.validate.min.js"></script>
+	
 	<script src="./js/global.js"></script>
 	<script src="./js/professional.js"></script>
 	<!-- Latest compiled and minified CSS -->
@@ -109,7 +115,7 @@
 					</div>
 					<div class="col-lg-12 ProfDetails AddProf">
 						<div class="row">
-							<form role="form">
+							<form id="professionalForm" role="form">
 								<div class="col-lg-6">
 									<div class="form-group">
 										<label for="APName">First Name</label> <input type="text"
@@ -514,8 +520,7 @@
 
 
 
-	<script
-		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	
 
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="./js/bootstrap.min.js"></script>
@@ -546,7 +551,7 @@
 								tabPosition : 'top'
 							});
 							// Configure/customize these variables.
-						
+
 							$('#APMdate').datepicker({
 								format : "dd/mm/yyyy"
 							});
@@ -558,7 +563,7 @@
 							});
 							$('#experienceTo').datepicker({
 								format : "dd/mm/yyyy"
-							});						
+							});
 						});
 	</script>
 </body>

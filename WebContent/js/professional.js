@@ -57,6 +57,8 @@
 	    $("#profInfoButton").click(function(e){
 	  	  e.preventDefault();
 			 
+	  	//  alert($("#professionalForm").valid());
+	  	  
 			  var params = {};
 			  //params.recordId=
 			  params.profFirstName=$("#APName").val();
@@ -467,6 +469,14 @@
 				$(this).prev().toggle();
 				return false;
 			});
+			
+			
+			
+		/*	$("#professionalForm").validate({
+				  submitHandler: function(form) {
+				    form.submit();
+				  }
+				 });*/
     
     }
   
