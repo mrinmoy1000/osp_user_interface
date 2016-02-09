@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title> View professionals </title>
+<title>View All professionals</title>
 
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css">
@@ -15,10 +15,10 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
 
 <!-- Latest compiled and minified JavaScript -->
- <script src="./js/global.js"></script>
+	<script src="./js/global.js"></script>
+	<script src="./js/admin.js"></script>
 <script src="./js/bootstrap.min.js" type="text/javascript"></script> 
 <script src="./js/metisMenu.min.js" type="text/javascript"></script> 
- <script src="./js/admin.js"></script>
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
@@ -35,53 +35,10 @@
 <!-- Font CSS -->
 <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
-	<script type="text/javascript">
-	 function approve(profId,status)
-	 {
-		 
-			$.ajax({type: "PUT",
-                url: "../approveProfile",
-                data:JSON.stringify( { 
-                	"profId": profId,
-                	"actionTaken":status }),
-                contentType: "application/json",
-                datatype : "application/json",
-                success:function(result){}
-			}
-			);
-	 }
-	 function viewProfile(profId)
-	 {
-		 window.location.replace("./profile.html?profId="+profId);				
-	 }
+	<script type="text/javascript">	
 	 $(document).ready(function(){
-		// loadProfessionals();
+		 initAdmin();
 		
-			$.ajax({
-				type: "GET",
-                url:  globalIP+"/allProfDetails",
-                datatype : "json",
-                success:function(result)
-                {
-                	var table = $('#professionlsTable tbody');    
-                	
-                //	table.append("<tr><td>c</td><td>d</td></tr>");
-                    $.each(result, function(i, data) {
-                    	var lastame ="";
-                    	var approveStaus = "AP";
-                    	var rejectStaus = "RJ";
-                    	if(data.profLastName===undefined)
-                    		{lastame="";}
-                    	table.append('<tr>'+
-                    	'<td>'+data.profLastName+' '+lastame+'</td>'+
-                    	'<td><button class="btn btn-success" type="button" title="Approve" onClick="approve('+data.profId + ',' + '\'ACTIVE\'' +')">Approve</button></td>'+
-                    	'<td><button class="btn btn-danger" type="button" title="Reject" onClick="approve('+data.profId + ',' + '\'REJECTED\'' +')">Reject</button></td>'+
-                    	'<td><button class="btn btn-btn-default" type="button" title="View Profile" onClick="viewProfile('+ data.profId+')">View Profile</button></td>'+
-                    	'</tr>');
-                    });
-
-                }
-			});
  });
 	
 	 </script>

@@ -23,11 +23,11 @@
 						
 						if(result.returnMessage=="view" && result.typeId=='23')
 						{
-							window.location.replace("./profile.html?recordId="+result.userId);	
+							window.location.replace("./profile.html?recordId="+result.userId+"&type=view");	
 						}
 						else if(result.returnMessage=="add" && result.typeId=='23')
 						{
-							window.location.replace("./add-profile.html?recordId="+result.userId);	
+							window.location.replace("./add-profile.html?recordId="+result.userId+"&type=add");	
 						}
 						else if(result.returnMessage=="ADMIN" && result.typeId=='50')
 						{

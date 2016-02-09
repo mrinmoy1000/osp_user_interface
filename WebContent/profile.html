@@ -7,6 +7,7 @@
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="css/bootstrap.min.css">
  <script src="./js/global.js"></script>
+ 	<script src="./js/professional.js"></script>
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="css/custom-style.css">
 <link rel="stylesheet" href="css/themify-icons.css">
@@ -450,28 +451,7 @@ $(document).ready(function() {
     // Configure/customize these variables.
     var showChar = 500;  // How many characters are shown by default
   
-    var recordId = getParameterByName('recordId');
-	$.ajax({
-		type: "GET",
-        url: globalIP+"/professional/viewProfilebyRecord",
-       data:{"recordId": recordId},
-        datatype : "application/json",
-        success:function(result){
-        	$(".ProfName").append("<label>"+result.profFirstName+"</label>");
-        	$(".ProfLastName").append("<label>"+result.profLastName+"</label>");
-        	$(".specializationName").append("<label>"+result.specializationList[0].profSpecName+"</label>");
-        	$(".ProfQualifications").append("<label>"+result.qualificationList[0].profAcdmcName+"</label>");
-        	$(".APContactEmail").append("<label>"+result.contactList[0].contactEmail+"</label>");
-        	$(".ProfExperience").append("<label>"+result.experienceList[0].profExpDesc+"</label>");
-     //   	$("#APMaritalSta option[value='"+result.profMeritalStatus+"']").attr("selected","selected");
-        	$(".ProfNationality").append("<label>"+result.profNationality+"</label>");
-        //	$("#APresiAddress1").val(result.addressList[0].line1);
-        //	$("#APresiAddress2").val(result.addressList[0].line2);
-        //	$("#APPincode").val(result.addressList[0].pinCode);
-        	
-        	
-        }
-        	});
+    initProfessionals();
     var ellipsestext = "...";
     var moretext = "more";
     var lesstext = "less";
