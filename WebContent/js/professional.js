@@ -516,6 +516,27 @@
 				    form.submit();
 				  }
 				 });*/
+			$('#publicationTable').on('click', 'a', function () {
+			    $(this).closest('tr').remove();
+			});
+			$('#acheivementsTable').on('click', 'a', function () {
+			    $(this).closest('tr').remove();
+			});
+			$('#specializationTable').on('click', 'a', function () {
+			    $(this).closest('tr').remove();
+			});
+			$('#experienceTable').on('click', 'a', function () {
+			    $(this).closest('tr').remove();
+			});
+			$('#qualificationTable').on('click', 'a', function () {
+			    $(this).closest('tr').remove();
+			});
+			$('#presentationTable').on('click', 'a', function () {
+			    $(this).closest('tr').remove();
+			});
+			$('#registeredMemNosTable').on('click', 'a', function () {
+			    $(this).closest('tr').remove();
+			});
     
     }
   
@@ -528,3 +549,110 @@
 	    if (!results[2]) return '';
 	    return decodeURIComponent(results[2].replace(/\+/g, " "));
 	}
+	function addPublicationTableRow() {
+		  
+		$('#publicationTable').append('<tr>'
+						+'<td><input type="text" class="form-control"'
+							+'placeholder="Name"></td>'
+						+'<td><textarea class="form-control"'
+								+'placeholder="Description"></textarea></td>'
+						+'<td align="center"><a class="minus">'
+						+'<i class="fa fa-minus-circle"></i></a></td>'
+					+'</tr>');
+				return false;
+			}
+
+function addAcheivementsTableRow() {
+
+$('#acheivementsTable').append('<tr>'
+		+ '<td><input type="text" class="form-control"'
+		+ 'placeholder="Name"></td>'
+		+ '<td><textarea class="form-control"'
+		+ 'placeholder="Description"></textarea></td>'
+		+ '<td><select class="form-control">'
+		+ '<option>Select Year</option>'
+		+ '<option>2016</option> </select></td>'	
+		+ '<td align="center"><a class="minus">'
+		+ '<i class="fa fa-minus-circle"></i></a></td>'
+	    + '</tr>');
+return false;
+}
+
+function addSpecializationTableRow() {
+
+$('#specializationTable').append('<tr>'
++'<td><input type="text" class="form-control"'
+	+'placeholder="Name"></td>'
++'<td><textarea class="form-control"'
+		+'placeholder="Description"></textarea></td>'
++'<td align="center"><a class="minus"><i '
+		+'class="fa fa-minus-circle"></i></a></td>'
+	    + '</tr>');
+return false;
+}
+
+function addQualificationTableRow() {
+
+$('#qualificationTable').append('<tr>'
++'<td><input type="text" class="form-control"'
++'placeholder="Name"></td>'
++'<td><textarea class="form-control"'
+		+'placeholder="Description"></textarea></td>'
++'<td><input type="text" class="form-control"'
+	+'placeholder="Institute / University"></td>'
++'<td><select class="form-control">'
+		+'<option>Select Year</option>'
+		+'<option>2016</option>'
++'</select></td>'
++'<td align="center"><a class="minus"><i '
+		+'class="fa fa-minus-circle"></i></a></td>'
+	    + '</tr>');
+return false;
+}
+
+function addExperienceTableRow() {
+
+$('#experienceTable').append('<tr>'
++'<td><input type="text" placeholder="From"'
+	+'class="form-control" id="experienceFrom"></td>'
++'<td><input type="text" placeholder="To"'
+	+'class="form-control" id="experienceTo"></td>'
++'<td><textarea class="form-control"'
+		+'placeholder="Description"></textarea></td>'
++'<td align="center"><a class="minus"><i '
+		+'class="fa fa-minus-circle"></i></a></td>'
+	    + '</tr>');
+return false;
+}
+
+function addPresentationTableRow() {
+
+$('#presentationTable').append('<tr>'
++'<td><input type="text" class="form-control"'
++'placeholder="Name"></td>'
++'<td><textarea class="form-control"'
+		+'placeholder="Description"></textarea></td>'
++'<td align="center"><a class="minus"><i '
+		+'class="fa fa-minus-circle"></i></a></td>'
+	    + '</tr>');
+return false;
+}
+
+function addRegisteredMemNosTableRow() {
+
+$('#registeredMemNosTable').append('<tr>'
++'<td><input type="text" class="form-control"'
++'placeholder="Registration / Membership No"></td>'
++'<td><input type="text" class="form-control"'
+	+'placeholder="Registration / Membership Type"></td>'
++'<td><input type="text" class="form-control"'
+	+'placeholder="Registering Council / Association / Authority"></td>'
++'<td><select class="form-control">'
+		+'<option>Select Year</option>'
+		+'<option>2016</option>'
++'</select></td>'
++'<td align="center"><a class="minus"><i '
+		+'class="fa fa-minus-circle"></i></a></td>'
+	    + '</tr>');
+return false;
+}

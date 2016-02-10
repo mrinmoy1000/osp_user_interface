@@ -164,7 +164,8 @@ box-shadow:0px 4px 0px rgba(178, 178, 178, 1);
 border:3px solid rgba(0, 0, 0, 0.1); } 
 
 .SubmitProfInfo {background: #ff6632;border-color: #ff6632; color:#fff; padding:12px 25px;}
-.FormTitle { font-size:16px; padding-top:15px;padding-bottom:5px; margin-bottom:10px; border-bottom:3px solid #DCDCDC;}
+.FormTitle { font-size:16px; padding-top:15px;padding-bottom:5px; margin-bottom:10px; border-bottom:3px solid #DCDCDC;position:relative;}
+.FormTitle span{position: absolute;right: 0;}
 .blog_post img {width:100%;}
 /*===== menu =======*/
 
