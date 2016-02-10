@@ -12,6 +12,7 @@
 		$('#opt_veriy').hide();
 		//alert( $.cookie("user_type") );
 	var recordId = getParameterByName('recordId');
+	var profId = getParameterByName('profId');
 	var parameterType = getParameterByName('type');
 	if(parameterType==="add")
 		{
@@ -51,7 +52,45 @@
 		        	
 		        }
 		        	});
-	}
+	}else
+		{
+		if(parameterType==="viewprofile")
+			{
+			$.ajax({
+				type: "GET",
+		        url: globalIP+"/professional/viewProfile",
+		       data:{"profId": profId},
+		        datatype : "application/json",
+		        success:function(result){
+		        	$(".ProfName").append("<label>"+result.profFirstName+"</label>");
+		        	$(".ProfLastName").append("<label>"+result.profLastName+"</label>");
+		        	
+		        	if(result.specializationList.length!==0)
+		        		{
+		        		$(".specializationName").append("<label>"+result.specializationList[0].profSpecName+"</label>");
+			        	$(".ProfQualifications").append("<label>"+result.qualificationList[0].profAcdmcName+"</label>");
+		        		
+		        		}
+		         	if(result.specializationList.length!==0)
+		         		{
+		         		$(".APContactEmail").append("<label>"+result.contactList[0].contactEmail+"</label>");
+		         		
+		         		}
+		         	
+		         	if(result.specializationList.length!==0)
+	         		{
+		         		$(".ProfExperience").append("<label>"+result.experienceList[0].profExpDesc+"</label>");
+	         		
+	         		}
+		        	
+		        	
+		        	$(".ProfNationality").append("<label>"+result.profNationality+"</label>");		        	
+		        }
+		        	});
+			
+			}
+		
+		}
 	}
 		
 	    $("#profInfoButton").click(function(e){
